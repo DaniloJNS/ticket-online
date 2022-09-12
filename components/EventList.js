@@ -9,6 +9,7 @@ const EventList = ({ events }) => {
         events.map((event) => {
           return (
             <Event
+              key={event.id}
               name={event.name}
               description={event.description}
               image={event.image}

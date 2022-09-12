@@ -1,20 +1,11 @@
-import { useState, useEffect } from "react";
 import {
   Navbar,
-  MobileNav,
   Typography,
   Button,
 } from "@material-tailwind/react";
 import Link from "next/link";
 
 export default function Header() {
-  useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
-  }, []);
-
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -23,13 +14,13 @@ export default function Header() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Pages
+        <a href="/" className="flex items-center">
+          Blog
         </a>
       </Typography>
       <Typography as="li" color="blue-gray" className="p-1 font-normal">
-        <a href="#" className="flex items-center">
-          Account
+        <a href="/" className="flex items-center">
+          Cinema
         </a>
       </Typography>
       <Typography
@@ -38,8 +29,8 @@ export default function Header() {
         color="blue"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Blocks
+        <a href="/" className="flex items-center">
+          Eventos
         </a>
       </Typography>
       <Typography
@@ -48,8 +39,8 @@ export default function Header() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Docs
+        <a href="/" className="flex items-center">
+          Shows
         </a>
       </Typography>
     </ul>

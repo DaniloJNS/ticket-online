@@ -10,11 +10,7 @@ const Event = ({ name, description, image }) => {
   return (
     <Card className="m-2">
       <CardHeader color="blue" className="mt-2 h-56">
-        <img
-          src={image}
-          alt="img-blur-shadow"
-          className="h-full w-full"
-        />
+        <img src={image} alt="img-blur-shadow" className="h-full w-full" />
       </CardHeader>
       <CardBody>
         <Typography variant="h5" className="mb-2">
@@ -36,4 +32,4 @@ const Event = ({ name, description, image }) => {
   );
 };
 
-export default Event
+export default Event;

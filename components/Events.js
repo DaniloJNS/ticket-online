@@ -1,25 +1,18 @@
-import { useState, useEffect } from "react";
 import EventList from "./EventList";
+import useEventList from "./useEventList";
 
 const Event = () => {
-  const [events, useEvents] = useState([]);
+  const [events, status] = useEventList();
 
-  useEffect(() => {
-    requestEvents();
-  }, []);
-
-  async function requestEvents() {
-    const res = await fetch(
-      "http://ticket-service-stage-rb.herokuapp.com/v1/events",
-      { mode: "cors" }
-    );
-
-    const json = await res.json();
-
-    useEvents(json);
-  }
-
-  return <EventList events={events} />;
+  return (
+    <>
+      {status == "unloaded" ? (
+        <span>loading...</span>
+      ) : (
+        <EventList events={events} />
+      )}
+    </>
+  );
 };
 
 export default Event;
