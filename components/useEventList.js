@@ -14,7 +14,7 @@ export default function useEventList() {
 
     async function requestEvents() {
       const res = await fetch(
-        "http://ticket-service-stg-rb.herokuapp.com/v1/events",
+        "https://ticket-service-stg-rb.herokuapp.com/v1/events",
         { mode: "cors" }
       );
 
